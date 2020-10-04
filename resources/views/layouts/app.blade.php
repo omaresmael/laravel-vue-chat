@@ -56,6 +56,13 @@
             background-color: #555;
         }
     </style>
+    <script>
+        window.Laravel = {!! json_encode([
+    'csrfToken' => csrf_token(),
+    'user' => Auth::user(),
+    'pusherKey' => config('broadcasting.connections.pusher.key'),
+  ]) !!};
+    </script>
 </head>
 <body>
     <div id="app">

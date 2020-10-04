@@ -14,6 +14,7 @@
                         <chat-messages :messages="messages"></chat-messages>
                     </div>
                     <div class="panel-footer">
+                        <message-typing ></message-typing>
                         <chat-form
                             @messagesent="addMessage"
                             :user="{{ Auth::user() }}"

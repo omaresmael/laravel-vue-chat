@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Events\MessageSent;
+use App\Events\TypingMessage;
 use App\Message;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -52,4 +53,5 @@ class ChatsController extends Controller
 
         return ['status' => 'Message Sent!'];
     }
+
 }
